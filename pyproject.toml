@@ -1,0 +1,116 @@
+# https://docs.astral.sh/uv/reference/settings/
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+# PROJECT
+
+[project]
+name = "tempestwx"
+version = "0.0.1"
+description = "Tempest API Client"
+authors = [{ name = "Grant Gaudet", email = "grant@greylabel.net" }]
+requires-python = ">=3.13"
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["tempest", "weather", "api"]
+dependencies = [
+    "httpx>=0.15.0",
+    "pydantic-settings>=2.8.1",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "loguru>=0.7.3",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+    "Topic :: Software Development :: Libraries",
+]
+
+# LINKS
+
+[project.urls]
+repository = "https://github.com/greylabel/tempestwx"
+
+
+# SCRIPTS
+
+[project.scripts]
+# (no console scripts)
+
+# DEPENDENCIES
+
+[dependency-groups]
+check = [
+    "bandit>=1.8.3",
+    "coverage>=7.6.12",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=1.2.0",
+    "pytest-cov>=6.0.0",
+    "pytest-httpx>=0.35.0",
+    "pytest-mock>=3.14.0",
+    "pytest-xdist>=3.6.1",
+    "ruff>=0.9.9",
+]
+commit = ["commitizen>=4.4.1", "pre-commit>=4.1.0"]
+dev = ["rust-just>=1.39.0"]
+doc = ["pdoc>=15.0.1"]
+
+# TOOLS
+
+[tool.uv]
+default-groups = ["check", "commit", "dev", "doc"]
+
+[tool.bandit]
+targets = ["src"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+changelog_start_rev = "v0.0.1"
+update_changelog_on_bump = true
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+omit = ["__main__.py"]
+
+[tool.mypy]
+pretty = true
+python_version = "3.13"
+check_untyped_defs = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+addopts = "--verbosity=2"
+pythonpath = ["src"]
+
+[tool.ruff]
+fix = true
+indent-width = 4
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D100", "D103"]
+
+# SYSTEMS
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
