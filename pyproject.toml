@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "twx"
+version = "0.1.0"
+description = ""
+authors = ["Grant Gaudet <grant@greylabel.net>"]
+readme = "README.md"
+packages = [{include = "twx", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
