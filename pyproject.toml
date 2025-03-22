@@ -1,15 +1,46 @@
-[tool.poetry]
+[project]
 name = "twx"
 version = "0.1.0"
 description = ""
-authors = ["Grant Gaudet <grant@greylabel.net>"]
+keywords = [ "tempest", "weather", "api" ]
+license = { text = "MIT" }
+authors = [
+    {name = "Grant Gaudet",email = "grant@greylabel.net"}
+]
 readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "urllib3 (>=2.3.0,<3.0.0)"
+]
+
+[project.urls]
+repository = "https://github.com/greylabel/twx"
+
+[tool.poetry]
 packages = [{include = "twx", from = "src"}]
 
-[tool.poetry.dependencies]
-python = "^3.13"
+[tool.poetry.scripts]
+main = "twx.twx:main"
 
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+flake8 = "^7.1.1"
+isort = "^6.0.0"
+mypy = "^1.15.0"
+pre-commit = "^4.1.0"
+pylint = "^3.3.4"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
