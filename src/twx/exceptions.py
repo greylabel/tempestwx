@@ -1,0 +1,2 @@
+class TempestBaseException(Exception):
+    pass
