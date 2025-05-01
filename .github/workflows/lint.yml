@@ -1,5 +1,6 @@
 name: Lint
-on: [pull_request]
+
+on: [push, pull_request]
 
 jobs:
   build:
@@ -22,3 +23,6 @@ jobs:
       - name: Lint with flake8
         run: |
           make lint
+      - name: Check sorted imports with isort
+        run: |
+          make isort
