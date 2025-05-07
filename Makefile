@@ -1,12 +1,12 @@
 .PHONY: integration_tests lint unit_tests
 
 install:
-		@echo poetry install
-		poetry install
+	@echo poetry install
+	poetry install
 
 install_dev:
-		@echo poetry install
-		poetry install
+	@echo poetry install
+	poetry install
 
 unit_tests:
 	@echo unit test...
