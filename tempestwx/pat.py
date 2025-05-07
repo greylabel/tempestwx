@@ -1,9 +1,10 @@
 __all__ = ["TempestPersonalAccessToken"]
 
-from dotenv import load_dotenv
 import logging
 import os
 from typing import Any, Dict
+
+from dotenv import load_dotenv
 
 from tempestwx.exceptions import TempestException
 
