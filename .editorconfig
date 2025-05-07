@@ -7,7 +7,7 @@ root = true
 [*]
 # Change these settings to your own preference
 indent_style = space
-indent_size = 4
+indent_size = 2
 max_line_length = 80
 
 # We recommend you to keep these unchanged
@@ -16,6 +16,12 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[Makefile]
-# Use tabs for indentation (Makefiles require tabs)
+[*.md]
+trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4
+
+[{Makefile, makefile}]
 indent_style = tab
+indent_size = 4
