@@ -21,7 +21,7 @@ repository = "https://github.com/greylabel/tempestwx"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
-flake8 = "^7.1.1"
+flake8 = "^7.3.0"
 isort = "^6.0.0"
 mypy = "^1.15.0"
 pre-commit = "^4.1.0"
