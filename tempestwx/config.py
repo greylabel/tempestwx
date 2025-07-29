@@ -2,16 +2,11 @@
 Tempest configuration
 """
 import os as _os
-
 from dotenv import load_dotenv as _load_env_vars
 
 from tempestwx.version import __version__
 
-# from tempestwx.utils.load_json_config import load_json_config as _load_json, load_json_config_from_single_env_var as _load_json_single_variable
-
 _load_env_vars()
-# _load_json()
-# _load_json_single_variable()
 
 TEMPEST_DEBUG = _os.environ.get('TEMPEST_DEBUG', "False").lower() == "true"
 TEMPEST_API_URI = _os.environ.get('TEMPEST_API_URI', 'https://swd.weatherflow.com/swd/rest/')
