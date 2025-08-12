@@ -26,7 +26,7 @@ isort = "^6.0.0"
 mypy = "^1.15.0"
 pre-commit = "^4.1.0"
 pylint = "^3.3.4"
-types-requests-oauthlib = "^2.0.0.20250306"
+types-requests-oauthlib = "^2.0.0.20250809"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.4"
