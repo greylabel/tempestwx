@@ -25,7 +25,7 @@ flake8 = "^7.1.1"
 isort = "^6.0.0"
 mypy = "^1.15.0"
 pre-commit = "^4.1.0"
-pylint = "^3.3.4"
+pylint = "^3.3.8"
 types-requests-oauthlib = "^2.0.0.20250306"
 
 [tool.poetry.group.test.dependencies]
