@@ -20,7 +20,7 @@ dependencies = [
 repository = "https://github.com/greylabel/tempestwx"
 
 [tool.poetry.group.dev.dependencies]
-black = "^25.1.0"
+black = "^25.9.0"
 flake8 = "^7.1.1"
 isort = "^6.0.0"
 mypy = "^1.15.0"
