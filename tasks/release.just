@@ -15,4 +15,4 @@ release-test-source: package-build
 # publish python package
 [group('release')]
 release-package: package-build release-test-wheel release-test-source
-	uv publish --require-hashes --wheel
+	uv publish

@@ -5,4 +5,4 @@ package: package-build
 # build python package
 [group('package')]
 package-build: clean-build
-	uv build --no-sources --require-hashes --wheel
+	uv build --no-sources
