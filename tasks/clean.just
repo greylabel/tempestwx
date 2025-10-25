@@ -1,22 +1,11 @@
 # run clean tasks
 [group('clean')]
-clean: clean-build clean-cache clean-constraints clean-coverage clean-docs clean-environment clean-mypy clean-outputs clean-pytest clean-python clean-requirements clean-ruff
+clean: clean-build clean-coverage clean-docs clean-mypy clean-pytest clean-python clean-ruff
 
 # clean build folders
 [group('clean')]
 clean-build:
     rm -rf dist/
-    rm -rf build/
-
-# clean cache folder
-[group('clean')]
-clean-cache:
-    rm -rf .cache/
-
-# clean constraints file
-[group('clean')]
-clean-constraints:
-    rm -rf constraints.txt
 
 # clean coverage files
 [group('clean')]
@@ -28,20 +17,10 @@ clean-coverage:
 clean-docs:
     rm -rf docs/
 
-# clean environment file
-[group('clean')]
-clean-environment:
-    rm -f python_env.yaml
-
 # clean mypy folders
 [group('clean')]
 clean-mypy:
     rm -rf .mypy_cache/
-
-# clean outputs folder
-[group('clean')]
-clean-outputs:
-    rm -rf outputs/*
 
 # clean pytest cache
 [group('clean')]
@@ -53,11 +32,6 @@ clean-pytest:
 clean-python:
     find . -type f -name '*.py[co]' -delete
     find . -type d -name __pycache__ -exec rm -r {} \+
-
-# clean requirements file
-[group('clean')]
-clean-requirements:
-    rm -f requirements.txt
 
 # clean ruff cache
 [group('clean')]
