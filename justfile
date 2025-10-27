@@ -28,7 +28,6 @@ default:
 
 import 'tasks/check.just'
 import 'tasks/clean.just'
-import 'tasks/commit.just'
 import 'tasks/doc.just'
 import 'tasks/docker.just'
 import 'tasks/format.just'

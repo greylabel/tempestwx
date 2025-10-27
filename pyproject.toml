@@ -58,7 +58,7 @@ check = [
     "pytest-xdist>=3.6.1",
     "ruff>=0.9.9",
 ]
-commit = ["commitizen>=4.4.1", "pre-commit>=4.1.0"]
+commit = ["pre-commit>=4.1.0"]
 dev = ["rust-just>=1.39.0"]
 doc = ["pdoc>=15.0.1"]
 
@@ -69,14 +69,6 @@ default-groups = ["check", "commit", "dev", "doc"]
 
 [tool.bandit]
 targets = ["src"]
-
-[tool.commitizen]
-name = "cz_conventional_commits"
-tag_format = "v$version"
-version_scheme = "pep440"
-version_provider = "pep621"
-changelog_start_rev = "v0.0.1"
-update_changelog_on_bump = true
 
 [tool.coverage.run]
 branch = true
