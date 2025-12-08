@@ -6,7 +6,7 @@
 
 [project]
 name = "tempestwx"
-version = "0.0.1"
+version = "0.0.2"
 description = "Tempest SDK for Python"
 authors = [{ name = "Grant Gaudet", email = "grant@greylabel.net" }]
 requires-python = ">=3.13"
