@@ -32,8 +32,8 @@ jobs:
       - name: Package
         run: uv run just package
       - name: Smoke test wheel artifact
-        run: just test-wheel
+        run: uv run just test-wheel
       - name: Smoke test sdist artifact
-        run: just test-source
+        run: uv run just test-source
       - name: Release
-        run: just release-package
+        run: uv run just release-package
