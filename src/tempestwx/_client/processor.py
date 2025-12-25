@@ -10,12 +10,15 @@ This module provides small, composable helpers for shaping API response data:
 from __future__ import annotations
 
 from collections.abc import Callable, Mapping
-from typing import Any
+from typing import Any, TypeVar
 
 from tempestwx._models import Model
 
+T = TypeVar("T")
+ModelT = TypeVar("ModelT", bound=Model)
 
-def pass_through[T](value: T) -> T:
+
+def pass_through(value: T) -> T:
     """Return the input value unchanged.
 
     This is an identity function used as a no-op processor when you want
@@ -37,7 +40,7 @@ def pass_through[T](value: T) -> T:
     return value
 
 
-def model_instance[ModelT: Model](
+def model_instance(
     type_: type[ModelT],
 ) -> Callable[[Mapping[str, Any] | None], ModelT | None]:
     """Create a function that instantiates a Pydantic model from a mapping.

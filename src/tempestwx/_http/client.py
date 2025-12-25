@@ -17,13 +17,17 @@ from __future__ import annotations
 
 from collections.abc import Callable, Coroutine
 from functools import wraps
-from typing import Concatenate, cast
+from typing import Concatenate, ParamSpec, TypeVar, TypeVarTuple, cast
 from warnings import warn
 
 from .base import Request, Response, Transport
 from .concrete import AsyncTransport, SyncTransport
 from .error import UnauthorisedError
 from .wrapper import TransportWrapper
+
+R = TypeVar("R")
+P = ParamSpec("P")
+Ts = TypeVarTuple("Ts")
 
 
 class TransportConflictWarning(RuntimeWarning):
@@ -175,7 +179,7 @@ class Client(TransportWrapper):
         await self.aclose()
 
 
-def send_and_process[R, **P, *Ts](
+def send_and_process(
     post_func: Callable[[Request, Response, *Ts], R],
 ) -> Callable[
     [Callable[Concatenate[Transport, P], tuple[Request, tuple[*Ts]]]],

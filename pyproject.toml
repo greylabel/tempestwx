@@ -9,7 +9,7 @@ name = "tempestwx"
 version = "0.0.2"
 description = "Tempest SDK for Python"
 authors = [{ name = "Grant Gaudet", email = "grant@greylabel.net" }]
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 readme = "README.md"
 license = { text = "MIT" }
 keywords = ["tempest", "weather", "api"]
@@ -26,6 +26,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
     "Topic :: Software Development :: Libraries",
@@ -82,7 +84,7 @@ exclude_lines = [
 
 [tool.mypy]
 pretty = true
-python_version = "3.13"
+python_version = "3.11"
 check_untyped_defs = true
 ignore_missing_imports = true
 strict = true
@@ -104,7 +106,7 @@ markers = [
 
 [tool.ruff]
 line-length = 88
-target-version = "py313"
+target-version = "py311"
 
 [tool.ruff.format]
 docstring-code-format = true

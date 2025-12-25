@@ -4,7 +4,7 @@ Python SDK for the [Tempest API](https://apidocs.tempestwx.com/reference).
 
 ## Installation
 
-Requires Python 3.13+.
+Requires Python 3.11+.
 
 - From PyPI:
 
