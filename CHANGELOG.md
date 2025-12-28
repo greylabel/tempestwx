@@ -13,3 +13,7 @@ All notable changes to this project will be documented in this file.
 ## v0.0.3
 
 - Downgrade Python required version to 3.11.
+
+## v0.0.4
+
+- Fix incorrect parameter names in observations API call.
