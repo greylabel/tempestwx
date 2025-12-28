@@ -146,8 +146,8 @@ class TempestObservations(TempestBase):
 
         return self._get(  # type: ignore[no-any-return]
             f"observations/stn/{station_id}",
-            start_time=start_time,
-            end_time=end_time,
+            time_start=start_time,
+            time_end=end_time,
             bucket=validate_bucket.value,  # send raw integer expected by API
             obs_fields=obs_fields,
             units_temp=validated_temp,
