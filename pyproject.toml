@@ -55,14 +55,14 @@ check = [
     "pytest-xdist>=3.6.1",
     "ruff>=0.9.9",
 ]
-hooks = ["pre-commit>=4.1.0"]
 dev = ["rust-just>=1.39.0"]
+hooks = ["pre-commit>=4.1.0"]
 
 
 # TOOLS
 
 [tool.uv]
-default-groups = ["check", "hooks", "dev"]
+default-groups = ["check", "dev", "hooks"]
 
 [tool.bandit]
 targets = ["src"]
