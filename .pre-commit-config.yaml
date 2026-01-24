@@ -17,7 +17,7 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 'v0.14.7'
+    rev: 'v0.14.13'
     hooks:
     # Run the linter (check only, no fixes)
     - id: ruff-check
