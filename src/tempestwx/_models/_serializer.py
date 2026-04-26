@@ -55,7 +55,7 @@ class StrEnumMeta(EnumMeta):
         return super().__getitem__(name.lower())
 
 
-class StrEnum(str, Enum, metaclass=StrEnumMeta):
+class StrEnum(str, Enum, metaclass=StrEnumMeta):  # noqa: UP042
     """Convert enumeration members to strings using their name.
 
     Ignores case when getting items. This does not change values.
