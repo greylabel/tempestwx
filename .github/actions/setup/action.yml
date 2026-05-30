@@ -12,4 +12,4 @@ runs:
       uses: astral-sh/setup-uv@v8.1.0
       with:
         enable-cache: true
-        version: "0.11.7"
+        version: "0.11.17"
