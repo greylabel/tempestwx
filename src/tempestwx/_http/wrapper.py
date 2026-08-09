@@ -33,7 +33,7 @@ class TransportWrapper(Transport):
         """Transport asynchronicity, delegated to the underlying transport."""
         return self.transport.is_async
 
-    def close(self) -> None | Coroutine[None, None, None]:
+    def close(self) -> Coroutine[None, None, None] | None:
         """Close the underlying transport.
 
         The return type depends on the wrapped transport:

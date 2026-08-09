@@ -51,6 +51,7 @@ class TempestObservations(TempestBase):
     def obs_station(
         self,
         station_id: int,
+        *,
         start_time: int | None = None,
         end_time: int | None = None,
         bucket: Bucket | int = TEMPEST_DEFAULT_UNITS.bucket.value,
@@ -161,6 +162,7 @@ class TempestObservations(TempestBase):
     def obs_device(
         self,
         device_id: int,
+        *,
         day_offset: int = 0,
         time_start: int | None = None,
         time_end: int | None = None,

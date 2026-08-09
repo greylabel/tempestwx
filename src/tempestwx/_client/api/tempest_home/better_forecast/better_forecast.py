@@ -35,6 +35,7 @@ class TempestBetterForecast(TempestBase):
     def forecast(
         self,
         station_id: int,
+        *,
         units_temp: UnitsTemp | str = TEMPEST_DEFAULT_UNITS.units_temp,
         units_wind: UnitsWind | str = TEMPEST_DEFAULT_UNITS.units_wind,
         units_pressure: UnitsPressure | str = TEMPEST_DEFAULT_UNITS.units_pressure,

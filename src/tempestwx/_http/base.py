@@ -102,7 +102,7 @@ class Transport(ABC):
         """
 
     @abstractmethod
-    def close(self) -> None | Coroutine[None, None, None]:
+    def close(self) -> Coroutine[None, None, None] | None:
         """Close underlying client.
 
         Returns:
