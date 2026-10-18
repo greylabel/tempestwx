@@ -3,7 +3,6 @@
 
 # REQUIRES
 
-docker := require("docker")
 find := require("find")
 rm := require("rm")
 uv := require("uv")
