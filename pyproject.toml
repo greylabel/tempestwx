@@ -53,7 +53,7 @@ check = [
     "pytest-httpx>=0.36.2",
     "pytest-mock>=3.17.0",
     "pytest-xdist>=3.8.0",
-    "ruff>=0.17.1",
+    "ruff>=0.17.3",
 ]
 dev = ["rust-just>=1.59.0"]
 hooks = ["pre-commit>=4.7.0"]
