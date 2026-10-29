@@ -1020,7 +1020,7 @@ wheels = [
 
 [[package]]
 name = "tempestwx"
-version = "0.0.5"
+version = "0.0.6"
 source = { editable = "." }
 default-groups = ["check", "dev", "hooks"]
 dependencies = [

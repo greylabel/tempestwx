@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.6
+
+- Update dependencies.
+
 ## v0.0.5
 
 - Enforce keyword-only arguments on API methods with optional parameters (`forecast`, `obs_station`, `obs_device`).
